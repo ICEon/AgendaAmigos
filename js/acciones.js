@@ -4,7 +4,7 @@ function EnviarPHP(reg){
 	datos = "Id="+reg;
 	$.ajax({
 		type: "POST",
-		url: "http://192.168.1.30/practica12/buscaramigo.php",
+		url: "http://192.168.1.84/practica12/buscaramigo.php",
 		data: datos
 	}).done(function(msg) {
 
