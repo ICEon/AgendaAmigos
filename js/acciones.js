@@ -28,14 +28,14 @@ $(document).ready(function(e){
 	document.addEventListener("deviceready",function(){
 		
 					$('.Send').tap(function(){
-						alert ("here");
+						
 		var formulario = $(this).parents('form');
 
 	switch(formulario.attr('name'))
 	{
 		
 			case 'BAmigo':
-
+alert (formulario.children('input:eq(0)').val());
 			var IdBuscar = formulario.children('input:eq(0)').val();
 				EnviarPHP(IdBuscar);
 	
