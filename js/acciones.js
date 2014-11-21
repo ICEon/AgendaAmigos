@@ -35,8 +35,8 @@ $(document).ready(function(e){
 	{
 		
 			case 'BAmigo':
-alert ($('#IdAmigo').val());
-			var IdBuscar = formulario.children('input:eq(0)').val();
+
+			var IdBuscar = $('#IdAmigo').val();
 				EnviarPHP(IdBuscar);
 	
 				break;	
