@@ -12,7 +12,9 @@ function EnviarPHP(reg){
 //msg = msg.slice(0,n);
 alert (msg);
 
-var DatosJSON = $.parseJSON(msg);
+var DatosJSON = JSON.parse(msg);
+
+//$.parseJSON(msg);
 alert(DatosJSON[Datos]);
 alert (DatosJSON.rows.length);
 if (DatosJSON.Datos == 1)
