@@ -19,7 +19,7 @@ alert(DatosJSON.datos);
 //alert (DatosJSON.amigos.length);
 if (DatosJSON.datos == 1)
  {
-	 
+	 $('#resultados').show();
 $('#resultados').append("<div style='width:80%; font-size:1.5em; font-weight:bold;' class='foto'><a href='#' class='detalle'><img src='imagenes/{id}.jpg' id='{id}' style='vertical-align:middle;'></a>"+DatosJSON.amigos[1].Nombre + "<hr></div> ");
 
 //alert("jsonobj.ValueRsp[0].Customer_Id: " + jsonobj.ValueRsp[0].Customer_Id);
