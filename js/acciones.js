@@ -70,8 +70,9 @@ alert ('ready');
 	{
 		
 			case 'BAmigo':
-
+alert ('dentro');
 			var NombreBuscar = $('#NombreAmigo').val();
+			alert (NombreBuscar);
 				EnviarPHP(NombreBuscar);
 				
 				/*
