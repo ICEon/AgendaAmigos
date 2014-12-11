@@ -1,7 +1,7 @@
 //JavaScript
 function EnviarPHP(reg){
 
-	datos = "Id="+reg;
+	datos = "NombreAmigo="+reg;
 	$.ajax({
 		type: "POST",
 		url: "http://192.168.1.84/practica12/buscaramigo.php",
@@ -11,6 +11,25 @@ function EnviarPHP(reg){
 //var n=msg.lastIndexOf("}")+1;
 //msg = msg.slice(0,n);
 alert (msg);
+
+var DatosJSON = $.parseJSON(msg);
+alert(DatosJSON.Datos);
+alert (DatosJSON.row.length);
+if (DatosJSON.Datos == 1)
+ {
+
+
+//alert("jsonobj.ValueRsp[0].Customer_Id: " + jsonobj.ValueRsp[0].Customer_Id);
+//$('#cheta').width($('.foto').width()/5);
+//<div style='width:80%; font-size:1.5em; font-weight:bold;' class='foto'><a href='#' class='detalle'><img src='imagenes/{id}.jpg' id='{id}' style='vertical-align:middle;'></a> {nombre}<hr></div> 
+	 
+ }
+ else
+ {
+	alert ("no hay amigos"); 
+ }
+
+
 /*var Datos = JSON.parse (msg);
 
 $('#devic table td').eq(1).text(Datos['Nombre']);
@@ -25,8 +44,24 @@ $('#devic table td').eq(15).text(Datos['COpcion']);
 	});
 }	
 $(document).ready(function(e){	
+$('#ocultar').hide();
+
+//$('#cheta').width($('.foto').width()/5);
+
+//$('#cheta').css('vertical-align', 'middle');
+
+/*alert ($('.foto').height());
+$('.nombre').height($('#cheta').height());
+alert($('.nombre').height());
+$('.nombre').css('vertical-align','middle');*/
+
+
 	document.addEventListener("deviceready",function(){
-		
+
+
+
+
+//		JSONArray products = null;
 					$('.Send').tap(function(){
 						
 		var formulario = $(this).parents('form');
@@ -36,8 +71,19 @@ $(document).ready(function(e){
 		
 			case 'BAmigo':
 
-			var IdBuscar = $('#IdAmigo').val();
-				EnviarPHP(IdBuscar);
+			var NombreBuscar = $('#NombreAmigo').val();
+				EnviarPHP(NombreBuscar);
+				
+				/*
+			borrar contenido de div resultados
+				for que va a reccorrer el arreglo json y agregará al div resultados
+				
+				<div style='width:80%; font-size:1.5em; font-weight:bold;' class='foto'><a href='#' class='detalle'><img src='imagenes/{id}.jpg' id='{id}' style='vertical-align:middle;'></a> {nombre}<hr></div> 
+				 
+				 N veces
+				 
+				
+				*/
 	
 				break;	
 				
