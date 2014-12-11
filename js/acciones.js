@@ -20,14 +20,16 @@ alert(DatosJSON.datos);
 if (DatosJSON.datos == 1)
  {
 $('#resultados').empty();	 
-	 
+$('#ocultar').show();	 
 	for (var i = 1; i <=DatosJSON.amigos.length  ; i++) {
-$('#resultados').append("<div style='width:80%; font-size:1.5em; font-weight:bold;' class='foto'><a href='#' class='detalle'><img src='http://192.168.1.30/practica12/"+DatosJSON.amigos[i].IdAmigo+".jpg' id='{id}' style='vertical-align:middle;'></a>"+DatosJSON.amigos[i].Nombre + "<hr></div> ");
+		alert (i);
+$('#resultados').append("<div style='width:80%; font-size:1.5em; font-weight:bold;' class='foto'><a href='#' class='detalle'><img src='http://192.168.1.30/practica12/"+DatosJSON.amigos[i].IdAmigo+".jpg' id='"+DatosJSON.amigos[i].IdAmigo+"' style='vertical-align:middle;'></a>"+DatosJSON.amigos[i].Nombre + "<hr></div> ");
+
 }
 
 
 
-$('#ocultar').show();
+
 //alert("jsonobj.ValueRsp[0].Customer_Id: " + jsonobj.ValueRsp[0].Customer_Id);
 //$('#cheta').width($('.foto').width()/5);
 //<div style='width:80%; font-size:1.5em; font-weight:bold;' class='foto'><a href='#' class='detalle'><img src='imagenes/{id}.jpg' id='{id}' style='vertical-align:middle;'></a> {nombre}<hr></div> 
