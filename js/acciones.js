@@ -15,8 +15,8 @@ alert (msg);
 var DatosJSON = JSON.parse(msg);
 
 //$.parseJSON(msg);
-alert(DatosJSON.Datos[1]);
-alert (DatosJSON.Amigos.length);
+alert(DatosJSON.datos[1]);
+alert (DatosJSON.amigos.length);
 if (DatosJSON.Datos == 1)
  {
 
