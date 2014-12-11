@@ -14,7 +14,7 @@ alert (msg);
 
 var DatosJSON = $.parseJSON(msg);
 alert(DatosJSON.Datos);
-alert (DatosJSON.row.length);
+alert (DatosJSON.rows.length);
 if (DatosJSON.Datos == 1)
  {
 
@@ -59,7 +59,7 @@ $('.nombre').css('vertical-align','middle');*/
 	document.addEventListener("deviceready",function(){
 
 
-
+alert ('ready');
 
 //		JSONArray products = null;
 					$('.Send').tap(function(){
