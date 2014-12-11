@@ -13,7 +13,7 @@ function EnviarPHP(reg){
 alert (msg);
 
 var DatosJSON = $.parseJSON(msg);
-alert(DatosJSON.Datos);
+alert(DatosJSON[Datos]);
 alert (DatosJSON.rows.length);
 if (DatosJSON.Datos == 1)
  {
