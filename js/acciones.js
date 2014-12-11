@@ -16,17 +16,17 @@ var DatosJSON = JSON.parse(msg);
 
 //$.parseJSON(msg);
 alert(DatosJSON.datos);
-//alert (DatosJSON.amigos.length);
+alert (DatosJSON.amigos.length);
 if (DatosJSON.datos == 1)
  {
 $('#resultados').empty();	 
 $('#ocultar').show();	 
-	for (var i = 1; i <=DatosJSON.amigos.length  ; i++) {
+	for (var i = 0; i <DatosJSON.amigos.length  ; i++) {
 		alert (i);
 $('#resultados').append("<div style='width:80%; font-size:1.5em; font-weight:bold;' class='foto'><a href='#' class='detalle'><img src='http://192.168.1.30/practica12/"+DatosJSON.amigos[i].IdAmigo+".jpg' id='"+DatosJSON.amigos[i].IdAmigo+"' style='vertical-align:middle;'></a>"+DatosJSON.amigos[i].Nombre + "<hr></div> ");
 
 }
-
+$('#17').width($('.foto').width()/5);
 
 
 
@@ -55,7 +55,7 @@ $('#devic table td').eq(15).text(Datos['COpcion']);
 	});
 }	
 $(document).ready(function(e){	
-$('#ocultar').hide();
+//$('#ocultar').hide();
 
 //$('#cheta').width($('.foto').width()/5);
 
