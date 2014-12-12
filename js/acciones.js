@@ -71,11 +71,11 @@ $('.nombre').css('vertical-align','middle');*/
 
 	document.addEventListener("deviceready",function(){
 
-
+/*
 $(window).on('orientationchange', function () {
 $('.famigo').width($('.foto').width()/5);
 });
-
+*/
 					
 
 $('.detalle').tap(function(){
