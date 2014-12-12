@@ -22,11 +22,11 @@ if (DatosJSON.datos == 1)
 $('#resultados').empty();	 
 $('#ocultar').show();	 
 	for (var i = 0; i <DatosJSON.amigos.length  ; i++) {
-		alert (i);
-$('#resultados').append("<div style='width:80%; font-size:1em; font-weight:bold;' class='foto'><a href='#' class='detalle'><img src='http://192.168.1.30/practica12/"+DatosJSON.amigos[i].IdAmigo+".jpg' class= 'famigo' id='"+DatosJSON.amigos[i].IdAmigo+"' style='vertical-align:middle;'></a>"+DatosJSON.amigos[i].Nombre + " "+ DatosJSON.amigos[i].ApPaterno + " " + DatosJSON.amigos[i].ApMaterno +"<hr></div> ");
+
+$('#resultados').append("<div style='width:80%; font-size:1em; font-weight:bold;' class='foto'><a href='#' class='detalle'><img src='http://192.168.1.30/practica12/"+DatosJSON.amigos[i].IdAmigo+".jpg' class='famigo' id='"+DatosJSON.amigos[i].IdAmigo+"' style='vertical-align:middle;'></a>"+DatosJSON.amigos[i].Nombre + " "+ DatosJSON.amigos[i].ApPaterno + " " + DatosJSON.amigos[i].ApMaterno +"<hr></div> ");
 
 }
-//$('.famigo').width($('.foto').width()/5);
+$('.famigo').width($('.foto').width()/5);
 
 
 
@@ -71,15 +71,18 @@ $('.nombre').css('vertical-align','middle');*/
 
 	document.addEventListener("deviceready",function(){
 
-/*
+
 $(window).on('orientationchange', function () {
 $('.famigo').width($('.foto').width()/5);
 });
-*/
+
 					$('.famigo').tap(function(){
 						alert ($(this).attr('id'));
 					});
 
+$('.detalle').tap(function(){
+	alert ('detalle');
+});
 					$('.Send').tap(function(){
 						
 		var formulario = $(this).parents('form');
