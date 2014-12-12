@@ -30,7 +30,7 @@ $('#resultados').append('<div style="width:100%; font-size:1em; font-weight:bold
 
 $('.detalle').attr("data-role", "button");
 $('.famigo').width($('.foto').width()/5);
-
+$('#Buscar').trigger('pagecreate');
 
 
 
