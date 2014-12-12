@@ -96,6 +96,7 @@ alert ('dentro');
 			var NombreBuscar = $('#NombreAmigo').val();
 			alert (NombreBuscar);
 				EnviarPHP(NombreBuscar);
+				$.mobile.changePage("#datos");
 				
 				/*
 			borrar contenido de div resultados
