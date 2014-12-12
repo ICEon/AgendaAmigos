@@ -22,11 +22,13 @@ if (DatosJSON.datos == 1)
 $('#resultados').empty();	 
 $('#ocultar').show();	 
 	for (var i = 0; i <DatosJSON.amigos.length  ; i++) {
-//<img src='http://192.168.1.30/practica12/"+DatosJSON.amigos[i].IdAmigo+".jpg' class='famigo' id='"+DatosJSON.amigos[i].IdAmigo+"' style='vertical-align:middle;'>
-//<div style="width:100%; font-size:1em; font-weight:bold;" class="foto"><a href="#" class="detalle" data-role="button">'+DatosJSON.amigos[i].Nombre + ' '+ DatosJSON.amigos[i].ApPaterno + ' ' + DatosJSON.amigos[i].ApMaterno +'</a><hr></div>
-$('#resultados').append('<a href="#" data-role="button">Prueba</a>');
+
+
+$('#resultados').append('<div style="width:100%; font-size:1em; font-weight:bold;" class="foto"><img src="http://192.168.1.30/practica12/'+DatosJSON.amigos[i].IdAmigo+'.jpg" class="famigo" id="'+DatosJSON.amigos[i].IdAmigo+'" style="vertical-align:middle;"><a href="#" class="detalle">'+DatosJSON.amigos[i].Nombre + ' '+ DatosJSON.amigos[i].ApPaterno + ' ' + DatosJSON.amigos[i].ApMaterno +'</a><hr></div>');
 
 }
+
+$('.detalle').attr("data-role", "button");
 $('.famigo').width($('.foto').width()/5);
 
 
